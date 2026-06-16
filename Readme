@@ -1,0 +1,13 @@
+Browser
+   |
+   v
+Nginx
+   |
+   v
+Flask Backend
+   |
+   +----------------+
+   |                |
+   v                v
+Redis         PostgreSQL
+(Cache)       (Database)
