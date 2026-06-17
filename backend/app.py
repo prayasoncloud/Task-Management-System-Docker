@@ -10,14 +10,9 @@ def home():
 
 @app.route("/health")
 def health():
-    return {
-        "status": "ok"
-    }
+    return {"status": "ok"}
 
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
-
-@app.route("/db")
+@app.route("/db")         
 def db_check():
     conn = psycopg2.connect(
         host="postgres",
@@ -25,13 +20,12 @@ def db_check():
         user="admin",
         password="password"
     )
-
     cur = conn.cursor()
     cur.execute("SELECT version();")
-
     version = cur.fetchone()
-
     cur.close()
     conn.close()
-
     return str(version)
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000)
