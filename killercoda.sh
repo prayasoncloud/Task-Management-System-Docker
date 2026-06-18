@@ -10,3 +10,8 @@ git pull https://github.com/prayasoncloud/Task-Management-System-Docker.git
 docker compose up --build
 
 
+##########
+
+git add .
+git commit -m "fix"
+git push

@@ -17,10 +17,10 @@ services:
     volummes: 
       - postgres_data:/var/lib/postgresql/data
 
-    nginx:
-      image: nginx:latest
-      volumes:
-        - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+  nginx:
+    image: nginx:latest
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
 
 
 volumes:
